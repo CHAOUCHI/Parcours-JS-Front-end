@@ -14,18 +14,10 @@ section{
     display: flex;
     justify-content: center;
 }
-#todo-list{
-    height: min-content;
-}
 body{
     font-size: 1.4rem;
     font-family: arial;
     color:white;
-}
-#todo-list{
-    width:80%;
-    background-color: rgb(255, 255, 255);
-    padding: 2rem;
 }
 #form{
     display: flex;
@@ -38,13 +30,53 @@ button{
     background-color: rgb(212, 212, 212);
 }
 button:active{
-    scale:0.98;
+    scale:0.90;
 }
+#save-todo,#clear-todo{
+    width:fit-content;
+    padding: 1rem;
+    margin:1rem 0;
+    background-color: rgb(121, 230, 121);
+}
+#clear-todo{
+    background-color: brown;
+    color:white;
+}
+.list-save{
+    color:green;    
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+#name-todo-list{
+    border:none;
+    font-size: 2rem;
+    height:fit-content;
+    margin:2rem 0rem;
+    color:rgb(56, 53, 53);
+    width:100%;
+}
+#name-todo-list:focus{
+    outline:none;
+    color:rgb(26, 26, 26)
+}
+#name-todo-list:focus::placeholder{
+    opacity: 0.1;
+}
+
+
 #todo{
     width:100%;
     border:none;
     padding:1rem;
     border-bottom:1px dashed grey;
+}
+
+#todo-list{
+    width:80%;
+    background-color: rgb(255, 255, 255);
+    padding: 2rem;
+    height: min-content;
 }
 .task{
     display: flex;
@@ -70,4 +102,10 @@ button:active{
 .done{
     text-decoration: line-through;
     color:black;
+}
+.error{
+    color:red;
+}
+.invisible{
+    opacity:0;
 }
