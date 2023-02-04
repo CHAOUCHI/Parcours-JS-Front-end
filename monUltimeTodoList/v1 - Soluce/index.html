@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="modal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body>
+    <menu class="navbar">
+        <div class="modal">
+            <!--
+            <a class="listid" data-listid="id de l'element du tableau dans le localStorage">Nom de liste</a>
+            -->
+        </div>
+        <i class="fa-solid fa-3x fa-bars burger"></i>
+    </menu>
+    <section>
+        <div id="todo-list">
+            <!--
+                NOUVEAU : le champ name-todo-liste qui permet de saisir le titre de ma liste
+            -->
+            <input data-listid=""type="text" id="name-todo-list" placeholder="Nommez votre TODO Liste"  autocomplete="off">
+            <p class="error invisible">Le titre doit être de 2 caractères minimum.</p>
+            <p class="list-save invisible">La liste a bien été enregistrée.</p>
+            <form id="form">
+                <input type="text" id="todo" placeholder="Ici votre tâche !"  autocomplete="off">
+                <button type="submit"> <i class="fas fa-plus"></i> </button>
+            </form>
+            <!--
+                NOUVEAU : les boutons Sauvegarder et nouvelle liste
+                 - Sauvegarder enregistre la liste dans le localStorage et met à jour l'affichage dans le menu burger
+                 - 
+            -->
+            <button id="save-todo">Sauvegarder la liste</button>
+            <button id="clear-todo">Nouvelle liste</button>
+            <div class="list-tasks">
+                <!--
+                <div class="task done">
+                    <p>Tache</p>
+                    <button class="btn-delete">
+                        <i class="fas fa-trash-alt"></i>
+                    </button>
+                    <button class="btn-archive">
+                        <i class="fas fa-check-circle"></i>
+                    </button>
+                </div>
+            -->
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>
+<script src="script.js"></script>
+<script src="modal.js"></script>
