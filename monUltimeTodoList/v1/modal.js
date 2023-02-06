@@ -5,7 +5,7 @@ const burger = document.querySelector(".burger");
 const modal = document.querySelector(".modal");
 
 // 3. Lors du clique sur le burger
-burger.addEventListener("click",function(){
+burger.addEventListener("clisk",function(){
     // 4. J'ajoute ou je retire la modal avec la classe show-modal
     modal.classList.toggle("show-modal");
     // 5. Je transforme le burger en croix et je rend la croix fixe
