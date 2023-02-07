@@ -15,12 +15,14 @@ const listTasks = document.querySelector(".list-tasks");
 // 6. Je récupère la fenetre modal du menu burger, elle contient la liste de toutes mes listes
 const loadListMenu = document.querySelector(".modal");
 
+const enterTaskField = document.getElementById("todo");
+
 
 // 7. Je charge toutes les todo listes dans le menu burger
 loadAllTodoLists();
 
 // 8. J'écoute l'ajout d'une tache
-formtask.addEventListener("submit",onAddTask);
+formtask.addEventListener("submit",onSubmitAddTaskToListes);
 
 // 9. Je sauvegarde la liste au clique sur le btn sauvegarder
 btnSaveList.addEventListener("click",onSaveList);
@@ -37,9 +39,9 @@ loadListMenu.addEventListener("click",onSelectTodoList);
 
 
 /** Fonctions de gestion d'évenements******************************************** */
-function onAddTask(event){
+function onSubmitAddTaskToListes(event){
     event.preventDefault();
-    const  todoValue = document.getElementById("todo").value;
+    const  todoValue = enterTaskField.value;
     addTask(todoValue);
     form.reset();
 }
